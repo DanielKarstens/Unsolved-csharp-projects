@@ -15,8 +15,22 @@ namespace TestExampleA
         /// </summary>
         public int SumOfSquaresOfPositives(List<int> numbers)
         {
+            if (numbers == null) 
+            {
+                throw new ArgumentException();
+            }
+            if (numbers.Count == 0)
+            {
+                throw new ArgumentException();
+            }
             int sum = 0;
-
+            foreach (var number in numbers)
+            {
+                if (number > 0)
+                {
+                    sum = sum + number * number;
+                }
+            }
             // Implement the logic described above
 
             return sum;
