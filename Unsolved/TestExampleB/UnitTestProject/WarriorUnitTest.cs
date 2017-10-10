@@ -56,5 +56,16 @@ namespace UnitTestProject
             // Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+        [TestMethod]
+        public void TakesDamage()
+        {
+            //Arrange
+
+
+            //Act
+
+            //Assert
+            Assert.ThrowsException<ArgumentException>(() => { throw new ArgumentException("Damage points must be non-negative"); });
+        }
     }
 }
